@@ -12,7 +12,7 @@ namespace MiPet
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new TiendaPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

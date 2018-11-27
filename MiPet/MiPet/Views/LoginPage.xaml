@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiPet.Views.LoginPage">
+             x:Class="MiPet.Views.LoginPage"
+             Title="Mi Pet">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Image Source="bg2.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#616161" Opacity="0.2"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="app.png" WidthRequest="200" HeightRequest="200" Margin="0,50,0,30"/>
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry x:Name="Usuario" Placeholder="Usuario" PlaceholderColor="Black"/>
+                    <Entry x:Name="Password" Placeholder="Contraseña" PlaceholderColor="Black" IsPassword="True"/>
+                    <Button Text="Iniciar sesión" BackgroundColor="Black" BorderRadius="20" TextColor="White" Clicked="Ingresar_Click"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
