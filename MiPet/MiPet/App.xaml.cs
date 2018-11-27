@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiPet.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace MiPet
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new TiendaPage());
         }
 
         protected override void OnStart()
