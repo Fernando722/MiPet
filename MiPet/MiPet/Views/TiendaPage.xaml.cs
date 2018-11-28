@@ -16,5 +16,6 @@ namespace MiPet.Views
 		{
 			InitializeComponent ();
 		}
+
 	}
 }
