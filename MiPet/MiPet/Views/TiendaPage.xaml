@@ -1,81 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiPet.Views.TiendaPage" Title="Tienda" BackgroundImage="bg2.jpg">
-    <Grid>
-        <!--<Image Source="bg2.jpg" Aspect="AspectFill"/>-->
-        <BoxView BackgroundColor="Beige" Opacity="0.8"/>
+             x:Class="MiPet.Views.TiendaPage" Title="Tienda" BackgroundColor="White">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
+    <StackLayout>
+        <ListView x:Name="listProductos" ItemSelected="Producto_Selected">
+            <ListView.ItemTemplate>
 
-            <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding Imagen}" 
+                               Text="{Binding Nombre}" 
+                               Detail="{Binding Descripcion}" 
+                               TextColor="Black" 
+                               DetailColor="Gray"/>
+                </DataTemplate>
 
-            <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-
-            <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-
-            <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-        </Grid.RowDefinitions>
-        
-        
-        <Label Grid.Row="1" Text="Producto:" TextColor="Black"/>
-        <Label Text="Guacal Gato" Grid.Row="1" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="2" Text="Descripción:" TextColor="Black"/>
-        <Label Text="Oferta" Grid.Row="2" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="3" Text="Precio:" TextColor="Black"/>
-        <Label Text="$70.000" Grid.Row="3" Grid.Column="1" TextColor="Black"/>
-        <!--<Image Grid.RowSpan="3" Grid.Column="2" Source="app.png"/>-->
-
-        <Label Grid.Row="4" Text="Producto:" TextColor="Black"/>
-        <Label Text="Guacal Gato" Grid.Row="4" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="5" Text="Descripción:" TextColor="Black"/>
-        <Label Text="Oferta" Grid.Row="5" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="6" Text="Precio:" TextColor="Black"/>
-        <Label Text="$70.000" Grid.Row="6" Grid.Column="1" TextColor="Black"/>
-        <!--<Image Grid.RowSpan="" Grid.Column="2" Source="app.png"/>-->
-
-        <Label Grid.Row="7" Text="Producto:" TextColor="Black"/>
-        <Label Text="Guacal Gato" Grid.Row="7" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="8" Text="Descripción:" TextColor="Black"/>
-        <Label Text="Oferta" Grid.Row="8" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="9" Text="Precio:" TextColor="Black"/>
-        <Label Text="$70.000" Grid.Row="9" Grid.Column="1" TextColor="Black"/>
-        <!--<Image Grid.RowSpan="" Grid.Column="2" Source="app.png"/>-->
-
-        <Label Grid.Row="10" Text="Producto:" TextColor="Black"/>
-        <Label Text="Guacal Gato" Grid.Row="10" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="11" Text="Descripción:" TextColor="Black"/>
-        <Label Text="Oferta" Grid.Row="11" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="12" Text="Precio:" TextColor="Black"/>
-        <Label Text="$70.000" Grid.Row="12" Grid.Column="1" TextColor="Black"/>
-        <!--<Image Grid.RowSpan="" Grid.Column="2" Source="app.png"/>-->
-
-        <Label Grid.Row="13" Text="Producto:" TextColor="Black"/>
-        <Label Text="Guacal Gato" Grid.Row="13" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="14" Text="Descripción:" TextColor="Black"/>
-        <Label Text="Oferta" Grid.Row="14" Grid.Column="1" TextColor="Black"/>
-        <Label Grid.Row="15" Text="Precio:" TextColor="Black"/>
-        <Label Text="$70.000" Grid.Row="15" Grid.Column="1" TextColor="Black"/>
-        <!--<Image Grid.RowSpan="" Grid.Column="2" Source="app.png"/>-->
-
-    </Grid>
+            </ListView.ItemTemplate>
 
 
-
+        </ListView>
+    </StackLayout>
+    
 </ContentPage>

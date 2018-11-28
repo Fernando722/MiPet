@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiPet.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,10 @@ namespace MiPet.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DetallePage : ContentPage
 	{
-		public DetallePage ()
+		public DetallePage (Producto producto)
 		{
 			InitializeComponent ();
-		}
+            BindingContext = producto;
+        }
 	}
 }

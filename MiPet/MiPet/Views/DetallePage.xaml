@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiPet.Views.DetallePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="MiPet.Views.DetallePage" Title="Detalle del Producto" BackgroundColor="White">
+
+    <Grid Padding="50">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding Imagen}"/>
+        <Label Grid.Row="1" Grid.Column="0" Text="Nombre:" FontAttributes="Bold"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Nombre}"/>
+        <Label Grid.Row="2" Grid.Column="0" Text="Descripcion:" FontAttributes="Bold"/>
+        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Descripcion}"/>
+        <Label Grid.Row="3" Grid.Column="0" Text="Precio:" FontAttributes="Bold"/>
+        <Label Grid.Row="3" Grid.Column="1" Text="{Binding Precio}"/>
+        <Button Text="Comprar" Grid.Row="4" Grid.ColumnSpan="2"/>
+    </Grid>
 </ContentPage>
